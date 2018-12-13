@@ -14,6 +14,18 @@ We agreed that there was a opportunity for a PDA submission app:
 ```
 BRIEF
 
+Problem statement
+You have been approached by a private Academic institution dealing with an externally accredited professional award. Your task is to build an evidence submission app to help users collate their documentation in line with the syllabus.  The institution are seeking to encourage more users undertaken activities as they go through the programme and have an opportunity to identify problem areas. 
+
+Problem summary
+- Timings - teaching schedule/ language
+- User Friendly formatting
+- Personal Schedule 
+- Report Progress
+- Submit Github
+- Show where there are blocked items
+
+
 Out of scope:
 Cohort management
 ```
