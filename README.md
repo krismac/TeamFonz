@@ -1,7 +1,6 @@
 # TeamFonz
 Group Project to practice using JavaScript/ Java to make a web based Professional Development Award (PDA) Submission application app.
 
-Created during Week 15 of CodeClan. 
 
 ## TeamFonz consisted of 
 - Genna Walsh (genocw)
@@ -20,7 +19,7 @@ Cohort management
 ```
 
 ## Specification
-CodeClan instructors required that we establish a project to create an application in 5 days using core Javascript with the frameworks. 
+CodeClan instructors required that we establish a project to create an application in 5 days (during Week 15 of CodeClan) using core Javascript with the frameworks.
 
 Our trello/kanban dynamically compared our MoSCoW requirements with our backlog/work breakdown status.
 
