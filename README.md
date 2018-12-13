@@ -8,18 +8,24 @@ Created during Week 15 of CodeClan.
 - Graham Stein (Graham-Stein)
 - Kris Mac (krismac)
 
-We agreed that there was a opportunity for a PDA submission app. 
+# Professional Development Academic Evidence Submission App
+- PDAEEEEE Submission App
 
-The website should take in some input, and display the breakdown of the data in a graph. 
+We agreed that there was a opportunity for a PDA submission app:
+```
+BRIEF
 
-- Trello: https://trello.com/b/0LqjPGHZ/codeclan-team-fonz
-- GoogleDrive: https://drive.google.com/open?id=1sZuXuGju3jt_WP1-7Yevg4NOeOf0Y1Rz
-- Github: https://github.com/krismac/TeamFonz/
+Out of scope:
+Cohort management
+```
 
-##Specification
+## Specification
 CodeClan instructors required that we establish a project to create an application in 5 days using core Javascript with the frameworks. 
 
 Our trello/kanban dynamically compared our MoSCoW requirements with our backlog/work breakdown status.
+
+The website should take in some input, and display the breakdown of the data in a graph. 
+
 
 # Development
 We self organised around 4 sprints, focusing on particular features and functionality within the days. The days were kicked off with a stand-up to support retrospective and re-planning and closed our day with a huddle and code remerges. We took turns in being Scrum Master each day and regularly took turns to drive. 
@@ -31,16 +37,6 @@ Our first exercise involved a short burst of independent research followed by a 
 - HTML/CSS/Bootstrap
 - Spring
 - React
-
-## Professional Development Academic Evidence Submission App
-- PDAEEEEE Submission App
-
-```
-BRIEF
-
-Out of scope:
-Cohort management
-```
 
 ## Features
 - User entry of academic evidence in line with SQA requirmeents
@@ -54,6 +50,11 @@ Cohort management
 ## Update history
 - v 0.1 MPV Release date --/12/2018
 - v 0.2 Extensions Release --/12/2018
+
+## Resources
+- Trello: https://trello.com/b/0LqjPGHZ/codeclan-team-fonz
+- GoogleDrive: https://drive.google.com/open?id=1sZuXuGju3jt_WP1-7Yevg4NOeOf0Y1Rz
+- Github: https://github.com/krismac/TeamFonz/
 
 ## Installing and running the app from Github
 - Clone the repository using git clone link
@@ -69,7 +70,7 @@ Cohort management
 - Diagraming 
 - CSS
 
-# Submission & Presentation
+## Submission & Presentation
 - [Rules of the Road](https://docs.google.com/document/d/1MD8Yi4hiPY5XFitAwXBfECcjO00kOQzaFoS4hIiFhRI/edit?usp=sharing)
 - [Presentation --/11/2018]() - TBC
 - [Code submission via Github repo]() - TBC
@@ -80,6 +81,6 @@ Cohort management
 - [Wireframes / Visualisation v2]() - TBC
 - [Wireframes / Visualisation v1]() - TBC
 
-# Screenshots:
+## Screenshots:
 - [Homepage](home.png) - TBC
 - [User input](input.png)  - TBC
