@@ -32,8 +32,8 @@ Our first exercise involved a short burst of independent research followed by a 
 - Spring
 - React
 
-## Academic Evidence Submission App
-- PDAAAAAAAH
+## Professional Development Academic Evidence Submission App
+- PDAEEEEE Submission App
 
 ```
 BRIEF
@@ -41,7 +41,9 @@ BRIEF
 
 ## Features
 - User entry of academic evidence in line with SQA requirmeents
-- Plan workload
+- Progress Summary for Submissions
+- Plan Submission workload
+- Add/Remove update Tasks
 
 ## API, Libraries, Resources
 - [Google API](https://developers.google.com/maps/documentation/)
