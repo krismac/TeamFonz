@@ -12,9 +12,9 @@ We agreed that there was a opportunity for a PDA submission app.
 
 The website should take in some input, and display the breakdown of the data in a graph. 
 
-Trello: https://trello.com/b/0LqjPGHZ/codeclan-team-fonz
-GoogleDrive: https://drive.google.com/open?id=1sZuXuGju3jt_WP1-7Yevg4NOeOf0Y1Rz
-Github: https://github.com/krismac/TeamFonz/
+- Trello: https://trello.com/b/0LqjPGHZ/codeclan-team-fonz
+- GoogleDrive: https://drive.google.com/open?id=1sZuXuGju3jt_WP1-7Yevg4NOeOf0Y1Rz
+- Github: https://github.com/krismac/TeamFonz/
 
 ##Specification
 CodeClan instructors required that we establish a project to create an application in 5 days using core Javascript with the frameworks. 
@@ -37,6 +37,9 @@ Our first exercise involved a short burst of independent research followed by a 
 
 ```
 BRIEF
+
+Out of scope:
+Cohort management
 ```
 
 ## Features
@@ -55,7 +58,7 @@ BRIEF
 ## Installing and running the app from Github
 - Clone the repository using git clone link
 - Install webpack using npm install webpack -g
-- Start the server using webpack (npm run build) from the root project folder
+- Start the server using 
 
 # Learning points
 - Consolidate our learning of vanilla JavaScript 
@@ -68,14 +71,14 @@ BRIEF
 
 # Submission & Presentation
 - [Rules of the Road](https://docs.google.com/document/d/1MD8Yi4hiPY5XFitAwXBfECcjO00kOQzaFoS4hIiFhRI/edit?usp=sharing)
-- [Presentation --/11/2018]()
-- [Code submission via Github repo]()
-- [Brief]()
-- [High level solution]()
-- [Diagrams - ERD - User needs - Use cases] to follow
-- [Inputs/ outputs] to follow
-- [Wireframes / Visualisation v2]()
-- [Wireframes / Visualisation v1]()
+- [Presentation --/11/2018]() - TBC
+- [Code submission via Github repo]() - TBC
+- [Brief]() - TBC
+- [High level solution]() - TBC
+- [Diagrams - ERD - User needs - Use cases] to follow - TBC
+- [Inputs/ outputs] to follow - TBC
+- [Wireframes / Visualisation v2]() - TBC
+- [Wireframes / Visualisation v1]() - TBC
 
 # Screenshots:
 - [Homepage](home.png) - TBC
