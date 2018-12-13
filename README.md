@@ -3,7 +3,7 @@ Group Project to practice using JavaScript/ Java to make a web based Professiona
 
 Created during Week 15 of CodeClan. 
 
-## Team Anonymous Squirrel consisted of 
+## TeamFonz consisted of 
 - Genna Walsh (genocw)
 - Graham Stein (Graham-Stein)
 - Kris Mac (krismac)
@@ -13,7 +13,7 @@ We agreed that there was a opportunity for a PDA submission app.
 The website should take in some input, and display the breakdown of the data in a graph. 
 
 Trello: https://trello.com/b/0LqjPGHZ/codeclan-team-fonz
-GoogleDrive: 
+GoogleDrive: https://drive.google.com/open?id=1sZuXuGju3jt_WP1-7Yevg4NOeOf0Y1Rz
 Github: https://github.com/krismac/TeamFonz/
 
 ##Specification
