@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import ModuleListContainer from './containers/ModuleListContainer.js';
 // import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <h1>PDA Tool</h1>
+      <ModuleListContainer />
     );
   }
 }
