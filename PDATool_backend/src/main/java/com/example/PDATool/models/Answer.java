@@ -1,17 +1,32 @@
 package com.example.PDATool.models;
 
+
+import javax.persistence.*;
+
+@Entity
+@Table(name="answers")
 public class Answer {
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long Id;
+
+    @Column
     private String evidenceImageProvided;
+
+    @Column
     private String evidenceTextProvided;
+
+    @Column
     private Long questionId;
+
+    @Column
     private String kanbanStatus;
 
     public Answer(Long questionId) {
         this.evidenceImageProvided = null;
         this.evidenceTextProvided = null;
-        this.kanbanStatus = "backlog";
+        this.kanbanStatus = null;
         this.questionId = questionId;
     }
 

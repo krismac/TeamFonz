@@ -1,11 +1,27 @@
 package com.example.PDATool.models;
 
-public class Question {
 
+import javax.persistence.*;
+
+
+@Entity
+@Table(name="questions")
+public class Question{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
+
+    @Column
     private String reference;
+
+    @Column
     private String unit;
+
+    @Column
     private String evidenceRequired;
+
+
 
     public Question(String reference, String unit, String evidenceRequired) {
         this.reference = reference;

@@ -1,12 +1,22 @@
 package com.example.PDATool.models;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
+@Entity
+@Table(name= "students")
 public class Student {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
+
+    @Column(name= "student_name")
     private String name;
+
+    @Column
     private List <Answer> answers;
 
     public Student(String name) {
