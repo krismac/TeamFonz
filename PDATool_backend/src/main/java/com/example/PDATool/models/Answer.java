@@ -23,11 +23,18 @@ public class Answer {
     @Column
     private String kanbanStatus;
 
-    public Answer(Long questionId) {
+    @ManyToOne
+    @JoinColumn(name = "student_id", nullable = false)
+    private Student student;
+
+
+
+    public Answer(Long questionId, Student student) {
         this.evidenceImageProvided = null;
         this.evidenceTextProvided = null;
         this.kanbanStatus = null;
         this.questionId = questionId;
+        this.student = student;
     }
 
     public Answer() {
@@ -71,5 +78,13 @@ public class Answer {
 
     public void setKanbanStatus(String kanbanStatus) {
         this.kanbanStatus = kanbanStatus;
+    }
+
+    public Student getStudent() {
+        return student;
+    }
+
+    public void setStudent(Student student) {
+        this.student = student;
     }
 }

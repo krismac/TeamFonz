@@ -1,5 +1,8 @@
 package com.example.PDATool.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.Cascade;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +19,9 @@ public class Student {
     @Column(name= "student_name")
     private String name;
 
-    @Column
+    @JsonIgnore
+    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
+    @OneToMany(mappedBy = "student", fetch = FetchType.LAZY)
     private List <Answer> answers;
 
     public Student(String name) {
