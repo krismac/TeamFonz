@@ -25,8 +25,13 @@ class ModuleListContainer extends Component {
     return (
       <div className="module-list-container">
         <h1>PDA Tool</h1>
-        <h3>Module list starts below:</h3>
-        <ModuleList data={this.state.modules}/>
+        <h3>Module list container is RED box:</h3>
+        <h3>Module list component is BLUE box below:</h3>
+        <div className="module-list-component">
+          <ModuleList
+            data={this.state.modules}
+          />
+        </div>
       </div>
     )
   }
