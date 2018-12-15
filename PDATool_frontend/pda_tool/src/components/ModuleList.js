@@ -8,7 +8,7 @@ const ModuleList = (props) => {
 
   const modules = props.data.map((module, index) => {
     return (
-      <div className="module-simple-component">
+      <div>
 
         <ModuleSimple
           index={index}

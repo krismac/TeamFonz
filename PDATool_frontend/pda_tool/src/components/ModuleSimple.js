@@ -5,10 +5,10 @@ import React from 'react';
 const ModuleSimple = (props) => {
 
   return (
-    <div>
+    <div className="module-simple-component">
 
       <p>I'm an overview of module number {props.index + 1}!</p>
-      
+
     </div>
   );
 

@@ -14,7 +14,8 @@
   color: white;
 } */
 
-.module-list-container, .single-module-container {
+.module-list-container, .single-module-container, .module-edit-form-container
+{
   border: 2px solid red;
   margin: 3px;
   padding: 2px;
@@ -34,6 +35,12 @@
 
 .module-detailed-component {
   border: 2px solid orange;
+  margin: 3px;
+  padding: 2px;
+}
+
+.module-edit-form-component {
+  border: 2px solid purple;
   margin: 3px;
   padding: 2px;
 }

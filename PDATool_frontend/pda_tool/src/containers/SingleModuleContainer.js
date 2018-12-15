@@ -1,4 +1,4 @@
-// outer container for when viewing individual module
+// container for viewing a particular module
 
 import React, {Component} from 'react';
 import ModuleDetailed from '../components/ModuleDetailed.js';
@@ -22,7 +22,7 @@ class SingleModuleContainer extends Component {
         <h3>Single Module Container is RED box:</h3>
         <h3>Detailed Module Component is ORANGE box:</h3>
 
-        <div className="module-detailed-component">
+        <div>
           <ModuleDetailed
             data={this.state.moduleData}
           />
