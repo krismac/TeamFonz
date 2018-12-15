@@ -18,7 +18,10 @@ class ModuleListContainer extends Component {
         }
       ]
     }
-    // idea: componentDidMount method could populate modules array
+  }
+
+  componentDidMount() {
+    // plan: componentDidMount method could populate (intitially empty) modules array in state
   }
 
   render() {
@@ -27,6 +30,7 @@ class ModuleListContainer extends Component {
         <h1>PDA Tool</h1>
         <h3>Module list container is RED box:</h3>
         <h3>Module list component is BLUE box below:</h3>
+        <h3>Module component is GREEN box:</h3>
         <div className="module-list-component">
           <ModuleList
             data={this.state.modules}

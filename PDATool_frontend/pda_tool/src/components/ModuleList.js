@@ -9,7 +9,6 @@ const ModuleList = (props) => {
   const modules = props.data.map((module, index) => {
     return (
       <div className="module-component">
-      <h3>Module component is GREEN box:</h3>
         <Module
           index={index}
           question={module.question}
