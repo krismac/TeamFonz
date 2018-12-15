@@ -10,7 +10,7 @@ public class Question{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    private long Id;
 
     @Column
     private String reference;
@@ -32,11 +32,11 @@ public class Question{
     public Question() {
     }
 
-    public Long getId() {
+    public long getId() {
         return Id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         Id = id;
     }
 

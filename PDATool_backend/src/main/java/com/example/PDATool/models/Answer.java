@@ -9,7 +9,7 @@ public class Answer {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long Id;
+    private long Id;
 
     @Column
     private String evidenceImageProvided;
@@ -29,7 +29,7 @@ public class Answer {
 
 
 
-    public Answer(Long questionId, Student student) {
+    public Answer(long questionId, Student student) {
         this.evidenceImageProvided = null;
         this.evidenceTextProvided = null;
         this.kanbanStatus = null;
@@ -40,11 +40,11 @@ public class Answer {
     public Answer() {
     }
 
-    public Long getId() {
+    public long getId() {
         return Id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         Id = id;
     }
 
@@ -64,11 +64,11 @@ public class Answer {
         this.evidenceTextProvided = evidenceTextProvided;
     }
 
-    public Long getQuestionId() {
+    public long getQuestionId() {
         return questionId;
     }
 
-    public void setQuestionId(Long questionId) {
+    public void setQuestionId(long questionId) {
         this.questionId = questionId;
     }
 
