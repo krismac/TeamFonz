@@ -16,15 +16,15 @@ import static org.junit.Assert.assertEquals;
 @SpringBootTest
 public class StudentTest {
 
-    Student student;
+    Student student2;
 
     @Autowired
     StudentRepository studentRepository;
 
     @Before
     public void before(){
-        student = new Student("Jean Claude", "Junker", "E27");
-        studentRepository.save(student);
+        student2 = new Student("Jean Claude", "Van Damme", "E30");
+        studentRepository.save(student2);
     }
 
     @Test
@@ -33,22 +33,22 @@ public class StudentTest {
 
     @Test
     public void canGetFirstName() {
-        assertEquals("Jean Claude", student.getFirstName());
-        Student test = studentRepository.getOne(student.getId());
+        assertEquals("Jean Claude", student2.getFirstName());
+        Student test = studentRepository.getOne(student2.getId());
         assertEquals("Jean Claude", test.getFirstName());
     }
 
     @Test
     public void canGetLastName() {
-        assertEquals("Junker", student.getLastName());
-        Student test = studentRepository.getOne(student.getId());
-        assertEquals("Junker", test.getLastName());
+        assertEquals("Van Damme", student2.getLastName());
+        Student test = studentRepository.getOne(student2.getId());
+        assertEquals("Van Damme", test.getLastName());
     }
 
     @Test
     public void canGetChort() {
-        assertEquals("E27", student.getCohort());
-        Student test = studentRepository.getOne(student.getId());
-        assertEquals("E27", test.getCohort());
+        assertEquals("E30", student2.getCohort());
+        Student test = studentRepository.getOne(student2.getId());
+        assertEquals("E30", test.getCohort());
     }
 }

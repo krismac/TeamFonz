@@ -25,6 +25,7 @@ public class AnswerTest {
     Question question;
     Answer answer;
     Student student;
+    Student student1;
 
     @Autowired
     QuestionRepository questionRepository;
@@ -38,7 +39,9 @@ public class AnswerTest {
     @Before
     public void before(){
         student = new Student("Jean Claude", "Junker", "E27");
+        student1 = new Student("Johnny", "Dawes", "E29");
         studentRepository.save(student);
+        studentRepository.save(student1);
         question = new Question("I.T.5", "I&T", "Demonstrate the use of an array in a program. Take screenshots of: \n" +
                 "*An array in a program\n" +
                 "*A function that uses the array\n" +
@@ -62,8 +65,7 @@ public class AnswerTest {
 
     @Test
     public void canGetStudentID(){
-        Student test = answer.getStudent();
-        assertEquals(1L, test.getId());
+        assertEquals(1L, student.getId());
     }
 
     @Test

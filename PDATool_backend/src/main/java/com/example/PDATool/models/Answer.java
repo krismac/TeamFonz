@@ -18,10 +18,11 @@ public class Answer {
     private String evidenceTextProvided;
 
     @Column
-    private Long questionId;
+    private long questionId;
 
     @Column
     private String kanbanStatus;
+//    Backlog/ In Progress / Done / Blocked
 
     @ManyToOne
     @JoinColumn(name = "student_id", nullable = false)
