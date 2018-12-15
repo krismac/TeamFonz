@@ -17,12 +17,12 @@ class ModuleListContainer extends Component {
           answer: "I'm an answer from module 2"
         }
       ]
-    }
-  }
+    };
+  };
 
   componentDidMount() {
-    // plan: componentDidMount method could populate (intitially empty) modules array in state
-  }
+    // get request will retrieve list of modules to populate state
+  };
 
   render() {
     return (
@@ -37,9 +37,9 @@ class ModuleListContainer extends Component {
           />
         </div>
       </div>
-    )
-  }
+    );
+  };
 
-}
+};
 
 export default ModuleListContainer;

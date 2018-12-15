@@ -1,19 +1,20 @@
 // renders all modules from list inherited from container's state.
+// under each module there'll be an edit button/link
 
 import React, {Fragment} from 'react';
-import Module from './Module.js';
+import ModuleSimple from './ModuleSimple.js';
 
 const ModuleList = (props) => {
-  console.log("ModuleList props data:", props.data);
 
   const modules = props.data.map((module, index) => {
     return (
       <div className="module-component">
-        <Module
+        <ModuleSimple
           index={index}
           question={module.question}
           answer={module.answer}
         />
+        <a>Button to View This Module</a>
       </div>
     )
   });
