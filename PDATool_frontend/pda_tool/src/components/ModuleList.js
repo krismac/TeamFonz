@@ -8,13 +8,15 @@ const ModuleList = (props) => {
 
   const modules = props.data.map((module, index) => {
     return (
-      <div className="module-component">
+      <div className="module-simple-component">
+
         <ModuleSimple
           index={index}
           question={module.question}
           answer={module.answer}
         />
-        <a>Button to View This Module</a>
+        <a>Button to View this Module</a>
+
       </div>
     )
   });
