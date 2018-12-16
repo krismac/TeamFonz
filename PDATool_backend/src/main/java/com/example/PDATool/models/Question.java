@@ -21,15 +21,28 @@ public class Question{
     @Column
     private String evidenceRequired;
 
+    @Column
+    private int weekNumber;
 
 
-    public Question(String reference, String unit, String evidenceRequired) {
+
+    public Question(String reference, String unit, String evidenceRequired, int weekNumber) {
         this.reference = reference;
         this.unit = unit;
         this.evidenceRequired = evidenceRequired;
+        this.weekNumber = weekNumber;
+
     }
 
     public Question() {
+    }
+
+    public int getWeekNumber() {
+        return weekNumber;
+    }
+
+    public void setWeekNumber(int weekNumber) {
+        this.weekNumber = weekNumber;
     }
 
     public long getId() {

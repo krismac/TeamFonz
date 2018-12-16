@@ -45,7 +45,7 @@ public class AnswerTest {
         question = new Question("I.T.5", "I&T", "Demonstrate the use of an array in a program. Take screenshots of: \n" +
                 "*An array in a program\n" +
                 "*A function that uses the array\n" +
-                "*The result of the function running");
+                "*The result of the function running", 2);
         questionRepository.save(question);
         answer = new Answer(question.getId(), student);
         answerRepository.save(answer);
