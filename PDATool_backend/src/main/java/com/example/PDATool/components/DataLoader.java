@@ -29,12 +29,14 @@ public class DataLoader implements ApplicationRunner {
 
     public void run(ApplicationArguments args){
 
-        Student student = new Student("Jean Claude", "Junker", "E27");
-        Student student1 = new Student("Johnny", "Dawes", "E29");
-        Student student2 = new Student("Jean Claude", "Van Damme", "E30");
+        Student student = new Student("Mia", "Wallace", "E27");
+        Student student1 = new Student("Vincent", "Vaga", "E29");
+        Student student2 = new Student("Marcellus", "Wallace", "E30");
+        Student student3 = new Student("Mr", "Wolf", "E30");
         studentRepository.save(student);
         studentRepository.save(student1);
         studentRepository.save(student2);
+        studentRepository.save(student3);
 
         Question questionIT5 = new Question("I.T.5", "I&T", "Demonstrate the use of an array in a program. Take screenshots of: \n" +
                 "*An array in a program\n" +
@@ -146,23 +148,45 @@ public class DataLoader implements ApplicationRunner {
         Question questionP17 = new Question("P.17", "P", "Produce a bug tracking report.", 9);
         questionRepository.save(questionP17);
 
-        Question questionIT7 = new Question("I.T.7", "P", "The use of Polymorphism in a program and what it is doing.", 12);
+        Question questionIT7 = new Question("I.T.7", "I&T", "The use of Polymorphism in a program and what it is doing.", 12);
         questionRepository.save(questionIT7);
 
-        Question questionAD5 = new Question("A.D.5", "P", "An Inheritance Diagram", 12);
+        Question questionAD5 = new Question("A.D.5", "A&D", "An Inheritance Diagram", 12);
         questionRepository.save(questionAD5);
 
+        Question questionIT1 = new Question("I.T.1", "I&T", "The use of Encapsulation in a program and what it is doing.", 12);
+        questionRepository.save(questionIT1);
 
+        Question questionIT2 = new Question("I.T.2", "I&T", "Take a screenshot of the use of Inheritance in a program. Take screenshots of:  \n" +
+                "*A Class\n" +
+                "*A Class that inherits from the previous class\n" +
+                "*An Object in the inherited class\n" +
+                "*A Method that uses the information inherited from another class.", 12);
+        questionRepository.save(questionIT2);
 
+        Question questionP9 = new Question("P.9", "P", "Select two algorithms you have written (NOT the group project)."+
+                " Take a screenshot of each and write a short statement on why you have chosen to use those algorithms.", 12);
+        questionRepository.save(questionP9);
 
-
-
-        Answer answer = new Answer(questionIT5.getId(), student);
-        Answer answer1 = new Answer(questionIT5.getId(), student1);
-        Answer answer2 = new Answer(questionIT5.getId(), student2);
+        Answer answer = new Answer(questionAD6.getId(), student3);
+        answer.setEvidenceImageProvided("Pretty 'king please with a cherry on top");
+        answer.setEvidenceTextProvided("What's the situation?");
+        answer.setKanbanStatus("Backlog");
         answerRepository.save(answer);
+
+        Answer answer1 = new Answer(questionIT3.getId(), student2);
+        answer1.setEvidenceImageProvided("TEST URL");
+        answer1.setEvidenceTextProvided("Test Text");
+        answer1.setKanbanStatus("In Progress");
         answerRepository.save(answer1);
+
+        Answer answer2 = new Answer(questionAD2.getId(), student);
+        answer2.setEvidenceImageProvided("https://www.google.com/search?q=pulp+fiction+cast&oq=pulp+fiction+c&aqs=chrome.1.69i59j0l2j69i57j0l2.5356j0j7&sourceid=chrome&ie=UTF-8");
+        answer2.setEvidenceTextProvided("Other Test Text");
+        answer2.setKanbanStatus("Blocked");
         answerRepository.save(answer2);
+
+
 
     }
 }
