@@ -1,7 +1,6 @@
 package com.example.PDATool.controllers;
 
-import com.example.PDATool.interfaces.IModule;
-import com.example.PDATool.models.Answer;
+import com.example.PDATool.models.Module;
 import com.example.PDATool.repository.answers.AnswerRepository;
 import com.example.PDATool.repository.questions.QuestionRepository;
 import com.example.PDATool.repository.students.StudentRepository;
@@ -30,19 +29,22 @@ public class ModuleController {
   StudentRepository studentRepository;
 
 
+//  get the first question and answer for a particular student
+
+//  /student_id --> Path variable
+//  getFirstModuleForStudent
+
+
+
+
     //create a route to get module to front end.
     //student ID present a list of mo
 
-  @GetMapping(value = "/{student_id}/")
-  public List<IModule> getAllModulesforStudent(@PathVariable Long student_id){
-
-      return
-
-  }
+//  @GetMapping(value = "/{student_id}/")
+//  public List<Module> getAllModulesforStudent(@PathVariable Long student_id){
+//
+//  }
 
 
 
-
-
-    @Transactional
 }

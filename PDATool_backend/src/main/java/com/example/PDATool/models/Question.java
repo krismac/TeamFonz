@@ -1,18 +1,14 @@
 package com.example.PDATool.models;
-
-
-import com.example.PDATool.interfaces.IModule;
-
 import javax.persistence.*;
 
 
 @Entity
 @Table(name= "questions")
-public class Question implements IModule {
+public class Question {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long Id;
+    private Long id;
 
     @Column
     private String reference;
@@ -45,11 +41,11 @@ public class Question implements IModule {
     }
 
     public long getId() {
-        return Id;
+        return this.id;
     }
 
-    public void setId(long id) {
-        Id = id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getReference() {

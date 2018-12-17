@@ -1,17 +1,15 @@
 package com.example.PDATool.models;
 
 
-import com.example.PDATool.interfaces.IModule;
-
 import javax.persistence.*;
 
 @Entity
 @Table(name="answers")
-public class Answer implements IModule {
+public class Answer {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private long Id;
+    private Long id;
 
     @Column
     private String evidenceImageProvided;
@@ -20,7 +18,7 @@ public class Answer implements IModule {
     private String evidenceTextProvided;
 
     @Column
-    private long questionId;
+    private Long questionId;
 
     @Column
     private String kanbanStatus;
@@ -32,7 +30,7 @@ public class Answer implements IModule {
 
 
 
-    public Answer(long questionId, Student student) {
+    public Answer(Long questionId, Student student) {
         this.evidenceImageProvided = null;
         this.evidenceTextProvided = null;
         this.kanbanStatus = null;
@@ -44,11 +42,11 @@ public class Answer implements IModule {
     }
 
     public long getId() {
-        return Id;
+        return this.id;
     }
 
-    public void setId(long id) {
-        Id = id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getEvidenceImageProvided() {
@@ -71,7 +69,7 @@ public class Answer implements IModule {
         return questionId;
     }
 
-    public void setQuestionId(long questionId) {
+    public void setQuestionId(Long questionId) {
         this.questionId = questionId;
     }
 

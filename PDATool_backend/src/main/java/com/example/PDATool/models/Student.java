@@ -14,7 +14,7 @@ public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long Id;
+    private Long id;
 
     @Column(name= "first_name")
     private String firstName;
@@ -25,37 +25,33 @@ public class Student {
     @Column
     private String cohort;
 
-    @JsonIgnore
-    @Cascade(org.hibernate.annotations.CascadeType.DELETE)
-    @OneToMany(mappedBy = "student", fetch = FetchType.LAZY)
-    private List <Answer> answers;
+//    private List <Module> modules;
 
     public Student(String firstName, String lastName, String cohort) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.answers = new ArrayList<>();
-//        TODO: this.answers needs populated on the basis of the list of Questions
+//        this.modules = new ArrayList<>();
         this.cohort = cohort;
     }
 
     public Student() {
     }
-
+//
     public long getId() {
-        return Id;
+        return id;
     }
 
-    public void setId(long id) {
-        Id = id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public List<Answer> getAnswers() {
-        return answers;
-    }
+//    public List<Module> getModules() {
+//        return modules;
+//    }
 
-    public void setAnswers(List<Answer> answers) {
-        this.answers = answers;
-    }
+//    public void setModules(List<Module> modules) {
+//        this.modules = modules;
+//    }
 
     public String getFirstName() {
         return firstName;
