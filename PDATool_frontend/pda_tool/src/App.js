@@ -1,26 +1,18 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+// use react router to switch between containers, like in full stack pirates example
+
+import React, { Component, Fragment } from 'react';
+import ModuleListContainer from './containers/ModuleListContainer.js';
+// import SingleModuleContainer from './containers/SingleModuleContainer.js';
+// import ModuleEditFormContainer from './containers/ModuleEditFormContainer.js';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Fragment>
+        <h1>container for main page showing list of modules:</h1>
+        <ModuleListContainer />
+      </Fragment>
     );
   }
 }
