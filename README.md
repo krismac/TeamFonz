@@ -1,13 +1,15 @@
 # TeamFonz
 Group Project to practice using JavaScript/ Java to make a web based Professional Development Award (PDA) Submission application app.
 
-
 ## TeamFonz consisted of 
 - Genna Walsh (genocw)
 - Graham Stein (Graham-Stein)
 - Kris Mac (krismac)
 
-# Professional Development Academic Evidence Submission App
+# Specification
+CodeClan instructors required that we establish a project to create an application in 5 days (during Week 15 of CodeClan) using core Java & Javascript with frameworks.
+
+## Professional Development Academic Evidence Submission App
 - PDAEEEEE Submission App
 
 We agreed that there was a opportunity for a PDA submission app:
@@ -34,16 +36,8 @@ Out of scope:
 Cohort management
 ```
 
-## Specification
-CodeClan instructors required that we establish a project to create an application in 5 days (during Week 15 of CodeClan) using core Javascript with the frameworks.
-
-Our trello/kanban dynamically compared our MoSCoW requirements with our backlog/work breakdown status.
-
-The website should take in some input, and display the breakdown of the data in a graph. 
-
-
-# Development
-We self organised around 4 sprints, focusing on particular features and functionality within the days. The days were kicked off with a stand-up to support retrospective and re-planning and closed our day with a huddle and code remerges. We took turns in being Scrum Master each day and regularly took turns to drive. 
+## Development
+We self organised around 4 sprints, focusing on particular features and functionality within the days. The days were kicked off with a stand-up to support retrospective and re-planning and closed our day with a huddle and code remerges. Our trello/kanban dynamically compared our MoSCoW requirements with our backlog/work breakdown status
 
 Our first exercise involved a short burst of independent research followed by a brainstorming session to determine core functionality (MVP) and data sources/approaches. The remainder of sprint 1 involved agreeing user journey/requirements and work breakdown along with laying groundwork such as creating a workflow to support code management around Github.
 
