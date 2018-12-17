@@ -6,18 +6,7 @@ import ModuleList from '../components/ModuleList.js';
 class ModuleListContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      modules: [
-        {
-          question: "I'm a question from module 1",
-          answer: "I'm an answer from module 1"
-        },
-        {
-          question: "I'm a question from module 2",
-          answer: "I'm an answer from module 2"
-        }
-      ]
-    };
+    this.state = {modules: []};
   };
 
   componentDidMount() {
@@ -37,7 +26,7 @@ class ModuleListContainer extends Component {
             data={this.state.modules}
           />
         </div>
-        
+
       </div>
     );
   };

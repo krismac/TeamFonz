@@ -12,10 +12,6 @@ class App extends Component {
       <Fragment>
         <h1>container for main page showing list of modules:</h1>
         <ModuleListContainer />
-        <h1>container for page after clicking on one module:</h1>
-        <SingleModuleContainer />
-        <h1>container for page after clicking to add/edit evidence for that module:</h1>
-        <ModuleEditFormContainer />
       </Fragment>
     );
   }
