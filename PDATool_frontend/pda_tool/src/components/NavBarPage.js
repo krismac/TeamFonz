@@ -22,10 +22,11 @@ class NavbarPage extends React.Component {
                                           <div className="d-none d-md-inline">Kanban</div>
                                         </DropdownToggle>
                                         <DropdownMenu className="dropdown-default"right>
-                                          <DropdownItem href="#!">Backlog</DropdownItem>
-                                          <DropdownItem href="#!">In Progress</DropdownItem>
-                                          <DropdownItem href="#!">Blocked</DropdownItem>
-                                          <DropdownItem href="#!">All items</DropdownItem>
+                                          <DropdownItem href="#backlog">Backlog</DropdownItem>
+                                          <DropdownItem href="#inprogress">In Progress</DropdownItem>
+                                          <DropdownItem href="#done">Done</DropdownItem>
+                                          <DropdownItem href="#blocked">Blocked</DropdownItem>
+                                          <DropdownItem href="#all">All items</DropdownItem>
                                         </DropdownMenu>
                                       </Dropdown>
           </Navbar>
