@@ -201,8 +201,8 @@ public class DataLoader implements ApplicationRunner {
 
         Answer answerP11= new Answer(questionP11.getId(), student3);
         answerP11.setEvidenceImageProvided("");
-        answerP11.setEvidenceTextProvided("");
-        answerP11.setKanbanStatus("Backlog");
+        answerP11.setEvidenceTextProvided("Some stuff, but not all of it yet...");
+        answerP11.setKanbanStatus("In Progress");
         answerRepository.save(answerP11);
 
         Question questionP12 = new Question("P.12", "P", "Take screenshots or photos of your planning "+
@@ -211,8 +211,8 @@ public class DataLoader implements ApplicationRunner {
 
         Answer answerP12= new Answer(questionP12.getId(), student3);
         answerP12.setEvidenceImageProvided("");
-        answerP12.setEvidenceTextProvided("");
-        answerP12.setKanbanStatus("Backlog");
+        answerP12.setEvidenceTextProvided("Nailed it :-) ");
+        answerP12.setKanbanStatus("Done");
         answerRepository.save(answerP12);
 
         Question questionP16 = new Question("P.16", "P", "Show an API being used within your program. Take a screenshot of:\n" +
@@ -222,8 +222,8 @@ public class DataLoader implements ApplicationRunner {
 
         Answer answerP16= new Answer(questionP16.getId(), student3);
         answerP16.setEvidenceImageProvided("");
-        answerP16.setEvidenceTextProvided("");
-        answerP16.setKanbanStatus("Backlog");
+        answerP16.setEvidenceTextProvided("Some opaque stuff...");
+        answerP16.setKanbanStatus("Blocked");
         answerRepository.save(answerP16);
 
         Question questionP18 = new Question("P.18", "P", "Demonstrate testing in your program. Take screenshots of:\n" +
