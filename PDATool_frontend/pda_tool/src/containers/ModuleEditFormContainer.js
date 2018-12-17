@@ -1,8 +1,10 @@
 // container for adding or editing evidence for a particular module
 
 import React, {Component} from 'react';
+
 import ModuleDetailed from '../components/ModuleDetailed.js';
 import ModuleEditForm from '../components/ModuleEditForm.js';
+
 
 class ModuleEditFormContainer extends Component {
   constructor(props) {
@@ -18,6 +20,7 @@ class ModuleEditFormContainer extends Component {
 
   render() {
     return (
+
       <div className="module-edit-form-container">
 
         <h3>Edit Form Container is RED box:</h3>

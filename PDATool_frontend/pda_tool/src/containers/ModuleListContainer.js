@@ -26,6 +26,8 @@ class ModuleListContainer extends Component {
 
   render() {
     return (
+
+
       <div className="module-list-container">
 
         <h3>Module List Container is RED box:</h3>
@@ -37,7 +39,7 @@ class ModuleListContainer extends Component {
             data={this.state.modules}
           />
         </div>
-        
+
       </div>
     );
   };
