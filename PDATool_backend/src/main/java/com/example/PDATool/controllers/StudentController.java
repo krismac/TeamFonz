@@ -16,10 +16,13 @@ public class StudentController {
     @Autowired
     StudentRepository studentRepository;
 
+
 //    @PutMapping(value="/")
 
     public List<Student> getAllStudents(){
         
         return studentRepository.findAll();
     }
+
+
 }

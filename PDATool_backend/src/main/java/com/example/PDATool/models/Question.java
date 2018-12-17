@@ -1,12 +1,14 @@
 package com.example.PDATool.models;
 
 
+import com.example.PDATool.interfaces.IModule;
+
 import javax.persistence.*;
 
 
 @Entity
 @Table(name= "questions")
-public class Question {
+public class Question implements IModule {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

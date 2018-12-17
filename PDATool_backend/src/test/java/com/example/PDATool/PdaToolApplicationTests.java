@@ -1,8 +1,8 @@
 //package com.example.PDATool;
 //
-//import com.example.PDATool.models.Answer;
-//import com.example.PDATool.models.Question;
-//import com.example.PDATool.models.Student;
+//import com.example.PDATool.modules.Answer;
+//import com.example.PDATool.modules.Question;
+//import com.example.PDATool.modules.Student;
 //import com.example.PDATool.repository.answers.AnswerRepository;
 //import com.example.PDATool.repository.questions.QuestionRepository;
 //import com.example.PDATool.repository.students.StudentRepository;
