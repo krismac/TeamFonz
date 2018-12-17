@@ -2,15 +2,23 @@
 
 import React, {Component} from 'react';
 import ModuleList from '../components/ModuleList.js';
+import Request from '../helpers/request.js';
 
 class ModuleListContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = {modules: []};
+    this.state = {
+      modules: []
+    };
   };
 
   componentDidMount() {
     // get request will retrieve list of modules to populate state
+    let request = new Request();
+    request.get('/api/questions/').then((data) => {
+      console.log("Get request to api/questions returns:", data);
+      // this.setState({modules: data});
+    });
   };
 
   render() {
