@@ -5,8 +5,8 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name="questions")
-public class Question{
+@Table(name= "questions")
+public class Question {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,14 +24,11 @@ public class Question{
     @Column
     private int weekNumber;
 
-
-
     public Question(String reference, String unit, String evidenceRequired, int weekNumber) {
         this.reference = reference;
         this.unit = unit;
         this.evidenceRequired = evidenceRequired;
         this.weekNumber = weekNumber;
-
     }
 
     public Question() {

@@ -29,7 +29,6 @@ public class StudentRepositoryImpl implements StudentRepositoryCustom {
             session.close();
         }
 
-
         return students;
     }
 }
