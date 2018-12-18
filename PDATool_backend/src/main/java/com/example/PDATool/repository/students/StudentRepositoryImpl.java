@@ -1,14 +1,14 @@
 package com.example.PDATool.repository.students;
 
-import com.example.PDATool.models.Student;
-import org.hibernate.Criteria;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.springframework.beans.factory.annotation.Autowired;
+        import com.example.PDATool.models.Student;
+        import org.hibernate.Criteria;
+        import org.hibernate.HibernateException;
+        import org.hibernate.Session;
+        import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.persistence.EntityManager;
-import javax.transaction.Transactional;
-import java.util.List;
+        import javax.persistence.EntityManager;
+        import javax.transaction.Transactional;
+        import java.util.List;
 
 public class StudentRepositoryImpl implements StudentRepositoryCustom {
 

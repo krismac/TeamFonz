@@ -9,67 +9,82 @@ import javax.persistence.*;
 
 public class Module {
 
-    private Long id;
+//    private Long id;
 
-    private Long questionId;
+    private String unit;
+    private String reference;
+    private String evidenceRequired;
+    private int weekNumber;
 
-    private Long answerId;
+    private String imageEvidence;
+    private String textEvidence;
+    private String kanbanStatus;
 
-    private Long studentId;
+    public Module(Question question, Answer answer) {
+        this.unit = question.getUnit();
+        this.reference = question.getReference();
+        this.evidenceRequired = question.getEvidenceRequired();
+        this.weekNumber = question.getWeekNumber();
 
-    public Module(Question question, Answer answer, Student student) {
-        this.questionId = question.getId();
-        this.answerId = answer.getId();
-        this.studentId = student.getId();
+        this.imageEvidence = answer.getEvidenceImageProvided();
+        this.textEvidence = answer.getEvidenceTextProvided();
+        this.kanbanStatus = answer.getKanbanStatus();
     }
 
-    public Module() {
+//    do we need getters&setters?
+    public String getUnit() {
+        return unit;
     }
 
-    public Long getId() {
-        return id;
+    public void setUnit(String unit) {
+        this.unit = unit;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public String getReference() {
+        return reference;
     }
 
-    public Long getQuestionId() {
-        return questionId;
+    public void setReference(String reference) {
+        this.reference = reference;
     }
 
-    public void setQuestionId(Long questionId) {
-        this.questionId = questionId;
+    public String getEvidenceRequired() {
+        return evidenceRequired;
     }
 
-    public Long getAnswerId() {
-        return answerId;
+    public void setEvidenceRequired(String evidenceRequired) {
+        this.evidenceRequired = evidenceRequired;
     }
 
-    public void setAnswerId(Long answerId) {
-        this.answerId = answerId;
+    public int getWeekNumber() {
+        return weekNumber;
     }
 
-    public Long getStudentId() {
-        return studentId;
+    public void setWeekNumber(int weekNumber) {
+        this.weekNumber = weekNumber;
     }
 
-    public void setStudentId(Long studentId) {
-        this.studentId = studentId;
+    public String getImageEvidence() {
+        return imageEvidence;
     }
 
-    //get all modules for a student
-    //student list of modules
+    public void setImageEvidence(String imageEvidence) {
+        this.imageEvidence = imageEvidence;
+    }
 
-    //JoinTable
-    //QID/AID/
+    public String getTextEvidence() {
+        return textEvidence;
+    }
 
-    //module class that joins attributes of answer and question and student ID
+    public void setTextEvidence(String textEvidence) {
+        this.textEvidence = textEvidence;
+    }
 
+    public String getKanbanStatus() {
+        return kanbanStatus;
+    }
 
-
-
-
-
-
+    public void setKanbanStatus(String kanbanStatus) {
+        this.kanbanStatus = kanbanStatus;
+    }
 }
