@@ -1,19 +1,20 @@
 package com.example.PDATool.controllers;
 
+        import com.example.PDATool.models.Answer;
         import com.example.PDATool.models.Module;
+        import com.example.PDATool.models.Question;
         import com.example.PDATool.repository.answers.AnswerRepository;
-        import com.example.PDATool.repository.modules.ModuleRepository;
         import com.example.PDATool.repository.questions.QuestionRepository;
-        import com.example.PDATool.repository.students.StudentRepository;
         import org.springframework.beans.factory.annotation.Autowired;
         import org.springframework.web.bind.annotation.GetMapping;
         import org.springframework.web.bind.annotation.PathVariable;
         import org.springframework.web.bind.annotation.RequestMapping;
         import org.springframework.web.bind.annotation.RestController;
 
-
-        import javax.transaction.Transactional;
+        import java.util.ArrayList;
         import java.util.List;
+        import java.util.Optional;
+
 
 @RestController
 @RequestMapping(value="/modules")
@@ -25,18 +26,38 @@ public class ModuleController {
     @Autowired
     QuestionRepository questionRepository;
 
-    @Autowired
-    StudentRepository studentRepository;
 
-    @Autowired
-    ModuleRepository moduleRepository;
+  @GetMapping(value = "/student/{student_id}/question/{question_id}")
+    public Module getModuleForStudentWithQuestionId(@PathVariable long student_id, @PathVariable long question_id) {
 
+      Optional<Question> question = questionRepository.findById(question_id);
+      Answer answer = answerRepository.findDistinctByQuestionId(question_id);
 
-  @GetMapping(value = "/{student_id}/{question_id}")
-    public List<Module> getModuleForStudentWithQuestionId(@PathVariable long student_id, @PathVariable long question_id) {
-      return moduleRepository.getModuleForStudentWithQuestionId(student_id, question_id);
+      return new Module(question.get(), answer);
+
   }
 
+  @GetMapping(value = "/student/{student_id}")
+    public List<Module> getAllModulesForAStudent(@PathVariable long student_id) {
+
+      List<Question> allQuestions = questionRepository.findAll();
+
+      List<Long> questionIDList = new ArrayList<>();
+      allQuestions.forEach(question -> {
+          questionIDList.add(question.getId());
+      });
+
+      List<Module> moduleList = new ArrayList<>();
+      questionIDList.forEach(questionID -> {
+          moduleList.add(getModuleForStudentWithQuestionId(student_id, questionID));
+      });
+
+      return moduleList;
+
+//      For this list of question IDs, for each one get a module with the Q ID and S ID
+
+
+  }
 
 
 

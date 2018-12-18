@@ -31,7 +31,6 @@ public class Module {
         this.kanbanStatus = answer.getKanbanStatus();
     }
 
-//    do we need getters&setters?
     public String getUnit() {
         return unit;
     }
