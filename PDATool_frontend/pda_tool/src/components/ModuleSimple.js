@@ -7,7 +7,7 @@ const ModuleSimple = (props) => {
   return (
     <div className="module-simple-component">
 
-      <p>I'm an overview of module number {props.index + 1}!</p>
+      <p>{props.requirement}</p>
 
     </div>
   );

@@ -15,9 +15,9 @@ class ModuleListContainer extends Component {
   componentDidMount() {
     // get request will retrieve list of modules to populate state
     let request = new Request();
-    // request.get('/api/questions').then((data) => {
-      // this.setState({modules: data});
-    // });
+    request.get('/api/modules/student/4').then((data) => {
+      this.setState({modules: data});
+    });
   };
 
   render() {

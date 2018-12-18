@@ -5,15 +5,14 @@ import React, {Fragment} from 'react';
 import ModuleSimple from './ModuleSimple.js';
 
 const ModuleList = (props) => {
-
+console.log("Props data passed to ModuleList:", props.data);
   const modules = props.data.map((module, index) => {
     return (
       <div>
 
         <ModuleSimple
           index={index}
-          question={module.question}
-          answer={module.answer}
+          requirement={module.evidenceRequired}
         />
         <a>Button to View this Module</a>
 
