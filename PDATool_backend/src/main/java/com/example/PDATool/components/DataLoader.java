@@ -354,25 +354,5 @@ public class DataLoader implements ApplicationRunner {
         answerP9.setKanbanStatus("Backlog");
         answerRepository.save(answerP9);
 
-//        Answer answer = new Answer(questionAD6.getId(), student3);
-//        answer.setEvidenceImageProvided("Pretty 'king please with a cherry on top");
-//        answer.setEvidenceTextProvided("What's the situation?");
-//        answer.setKanbanStatus("Backlog");
-//        answerRepository.save(answer);
-
-//        Answer answer1 = new Answer(questionIT3.getId(), student2);
-//        answer1.setEvidenceImageProvided("TEST URL");
-//        answer1.setEvidenceTextProvided("Test Text");
-//        answer1.setKanbanStatus("In Progress");
-//        answerRepository.save(answer1);
-//
-//        Answer answer2 = new Answer(questionAD2.getId(), student);
-//        answer2.setEvidenceImageProvided("https://www.google.com/search?q=pulp+fiction+cast&oq=pulp+fiction+c&aqs=chrome.1.69i59j0l2j69i57j0l2.5356j0j7&sourceid=chrome&ie=UTF-8");
-//        answer2.setEvidenceTextProvided("Other Test Text");
-//        answer2.setKanbanStatus("Blocked");
-//        answerRepository.save(answer2);
-
-
-
     }
 }

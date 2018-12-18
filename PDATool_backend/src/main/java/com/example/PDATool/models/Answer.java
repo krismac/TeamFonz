@@ -28,8 +28,6 @@ public class Answer {
     @JoinColumn(name = "student_id", nullable = false)
     private Student student;
 
-
-
     public Answer(Long questionId, Student student) {
         this.evidenceImageProvided = null;
         this.evidenceTextProvided = null;

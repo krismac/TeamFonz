@@ -25,18 +25,15 @@ public class Student {
     @Column
     private String cohort;
 
-//    private List <Module> modules;
-
     public Student(String firstName, String lastName, String cohort) {
         this.firstName = firstName;
         this.lastName = lastName;
-//        this.modules = new ArrayList<>();
         this.cohort = cohort;
     }
 
     public Student() {
     }
-//
+
     public long getId() {
         return id;
     }
@@ -44,14 +41,6 @@ public class Student {
     public void setId(long id) {
         this.id = id;
     }
-
-//    public List<Module> getModules() {
-//        return modules;
-//    }
-
-//    public void setModules(List<Module> modules) {
-//        this.modules = modules;
-//    }
 
     public String getFirstName() {
         return firstName;

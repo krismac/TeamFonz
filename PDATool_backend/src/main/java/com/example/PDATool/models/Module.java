@@ -9,8 +9,6 @@ import javax.persistence.*;
 
 public class Module {
 
-//    private Long id;
-
     private String unit;
     private String reference;
     private String evidenceRequired;

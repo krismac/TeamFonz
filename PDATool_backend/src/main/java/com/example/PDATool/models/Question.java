@@ -1,7 +1,6 @@
 package com.example.PDATool.models;
 import javax.persistence.*;
 
-
 @Entity
 @Table(name= "questions")
 public class Question {
