@@ -2,6 +2,7 @@
 
 import React, {Component} from 'react';
 import ModuleDetailed from '../components/ModuleDetailed.js';
+import {Col, Card, CardImage, CardBody, CardText, CardTitle, Button} from "mdbreact";
 
 class SingleModuleContainer extends Component {
   constructor(props) {
@@ -17,17 +18,35 @@ class SingleModuleContainer extends Component {
 
   render() {
     return (
+
       <div className="single-module-container">
-
-        <h3>Single Module Container is RED box:</h3>
-        <h3>Detailed Module Component is ORANGE box:</h3>
-
-        <div>
-          <ModuleDetailed
-            data={this.state.moduleData}
+      <Col>
+        <Card style={{ width: "22rem" }}>
+          <CardImage
+            className="img-fluid"
+            src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg"
+            waves
           />
-          <a>Button to Add/Edit evidence for this Module</a>
-        </div>
+          <CardBody>
+            <CardTitle>Card title</CardTitle>
+            <CardText>
+                              <ModuleDetailed
+                                data={this.state.moduleData}
+                              />
+                              Single Module Container is RED box:
+                              Detailed Module Component is ORANGE box:
+
+                              <div>
+
+                              </div>
+            </CardText>
+            <Button href="#">Edit evidence for this Module</Button>
+          </CardBody>
+        </Card>
+      </Col>
+
+
+
 
       </div>
     );

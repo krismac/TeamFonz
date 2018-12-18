@@ -2,6 +2,8 @@
 
 import React, {Component} from 'react';
 import ModuleList from '../components/ModuleList.js';
+import {Progress} from "mdbreact";
+
 
 class ModuleListContainer extends Component {
   constructor(props) {
@@ -28,8 +30,12 @@ class ModuleListContainer extends Component {
     return (
 
 
+
       <div className="module-list-container">
 
+      <Progress material value={25} height="20px">
+        25%
+      </Progress>
         <h3>Module List Container is RED box:</h3>
         <h3>Module List Component is BLUE box below:</h3>
         <h3>Simple Module component is GREEN box:</h3>
