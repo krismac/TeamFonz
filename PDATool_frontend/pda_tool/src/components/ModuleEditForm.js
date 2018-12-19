@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ImageDrop from './ImageDrop.js';
 
 const ModuleEditForm = (props) => {
 
@@ -8,7 +9,9 @@ const ModuleEditForm = (props) => {
       <form>
 
       <label for="images">Add images</label>
-      <input type="text" id="images" placeholder="input image link here" />
+
+        <ImageDrop/>
+
       <label for="description">Add description</label>
       <input type="text" placeholder="input descriptive text here" />
 

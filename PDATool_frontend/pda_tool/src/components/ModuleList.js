@@ -15,6 +15,7 @@ const ModuleList = (props) => {
         />
         <a>Button to View this Module</a>
 
+
       </div>
     )
   });
