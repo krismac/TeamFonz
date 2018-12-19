@@ -1,6 +1,7 @@
 //  more question detail plus student Answer
 
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const ModuleDetailed = (props) => {
 
@@ -35,6 +36,12 @@ const ModuleDetailed = (props) => {
     <div className="module-detail text-evidence">
       <p>Text Evidence Here: {props.textEvidence}</p>
     </div>
+
+    <Link to={"/api/modules/edit/" + props.answerId}>
+      <div className="edit-module">
+        <p>Edit this module</p>
+      </div>
+    </Link>
 
     </div>
   );

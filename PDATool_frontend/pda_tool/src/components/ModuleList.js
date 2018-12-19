@@ -20,7 +20,6 @@ const ModuleList = (props) => {
           textEvidence={module.textEvidence}
           kanbanStatus={module.kanbanStatus}
         />
-        <a>Button to View this Module</a>
 
       </div>
     )
