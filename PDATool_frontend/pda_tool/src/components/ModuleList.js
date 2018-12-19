@@ -10,7 +10,7 @@ const ModuleList = (props) => {
       <div>
 
         <ModuleSimple
-          index={index}
+          key={index}
           unit={module.unit}
           reference={module.reference}
           evidenceRequired={module.evidenceRequired}

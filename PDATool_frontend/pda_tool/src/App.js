@@ -15,17 +15,21 @@ class App extends Component {
       <Router >
         <Fragment>
           <Switch>
-          <Route path = '/api/modules' component={ModuleListContainer}/>
-          <Route path="/api/modules/:id" render = {(props) => {
+
+          <Route exact path = '/api/modules' component={ModuleListContainer}/>
+
+          <Route exact path="/api/modules/:id" render = {(props) => {
             const id = props.match.params.id;
             return <SingleModuleContainer id={id} />
           }}
           />
-          <Route path="/api/modules/edit/:id" render = {(props) => {
+
+          <Route exact path="/api/modules/edit/:id" render = {(props) => {
             const id = props.match.params.id;
             return <ModuleEditFormContainer id={id} />
           }}
           />
+
           </Switch>
         </Fragment>
       </Router>
