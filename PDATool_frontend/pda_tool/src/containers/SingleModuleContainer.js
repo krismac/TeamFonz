@@ -2,6 +2,7 @@
 
 import React, {Component} from 'react';
 import ModuleDetailed from '../components/ModuleDetailed.js';
+import Request from '../helpers/request.js';
 
 class SingleModuleContainer extends Component {
   constructor(props) {
@@ -20,6 +21,9 @@ class SingleModuleContainer extends Component {
   };
 
   render() {
+
+
+
     return (
       <div className="single-module-container">
 
@@ -28,7 +32,6 @@ class SingleModuleContainer extends Component {
 
         <div>
           <ModuleDetailed
-          index={index}
           unit={module.unit}
           reference={module.reference}
           evidenceRequired={module.evidenceRequired}

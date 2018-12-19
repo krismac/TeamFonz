@@ -2,7 +2,7 @@
 
 import React, { Component, Fragment } from 'react';
 import ModuleListContainer from './containers/ModuleListContainer.js';
-// import SingleModuleContainer from './containers/SingleModuleContainer.js';
+import SingleModuleContainer from './containers/SingleModuleContainer.js';
 // import ModuleEditFormContainer from './containers/ModuleEditFormContainer.js';
 import './App.css';
 
@@ -12,6 +12,8 @@ class App extends Component {
       <Fragment>
         <h1>container for main page showing list of modules:</h1>
         <ModuleListContainer />
+        <h1>container for page showing detailed view of one module:</h1>
+        <SingleModuleContainer />
       </Fragment>
     );
   }
