@@ -3,6 +3,7 @@
 import React, {Component} from 'react';
 import ModuleList from '../components/ModuleList.js';
 import Request from '../helpers/request.js';
+import { PDFExport } from '@progress/kendo-react-pdf';
 
 class ModuleListContainer extends Component {
   constructor(props) {
@@ -22,6 +23,14 @@ class ModuleListContainer extends Component {
 
   render() {
     return (
+      <>
+      <div className="module-list-print">
+                          <button className="print-button" onClick={this.exportPDFWithComponent}>Export with component</button>
+                          &nbsp;
+                      </div>
+
+      <PDFExport ref={(component) => this.pdfExportComponent = component} paperSize="A4">
+
       <div className="module-list-container">
 
         <h3>Module List Container is RED box:</h3>
@@ -35,8 +44,13 @@ class ModuleListContainer extends Component {
         </div>
 
       </div>
+      </PDFExport>
+      </>
     );
   };
+  exportPDFWithComponent = () => {
+          this.pdfExportComponent.save();
+      }
 
 };
 

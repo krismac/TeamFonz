@@ -32,7 +32,7 @@ public class DataLoader implements ApplicationRunner {
         Student student = new Student("Mia", "Wallace", "E27");
         Student student1 = new Student("Vincent", "Vaga", "E29");
         Student student2 = new Student("Marcellus", "Wallace", "E30");
-        Student student3 = new Student("Mr", "Wolf", "E30");
+        Student student3 = new Student("Butch", "Coolidge", "E30");
         studentRepository.save(student);
         studentRepository.save(student1);
         studentRepository.save(student2);
@@ -45,9 +45,9 @@ public class DataLoader implements ApplicationRunner {
         questionRepository.save(questionIT5);
 
         Answer answerIT5 = new Answer(questionIT5.getId(), student3);
-        answerIT5.setEvidenceImageProvided("Pretty 'king please with a cherry on top");
-        answerIT5.setEvidenceTextProvided("What's the situation?");
-        answerIT5.setKanbanStatus("Backlog");
+        answerIT5.setEvidenceImageProvided("https://res.cloudinary.com/fonz/image/upload/v1545240658/Screen_Shot_2018-12-19_at_17.30.19.png");
+        answerIT5.setEvidenceTextProvided("The find_and_delete method finds the stop, deletes from the list and prints out the new list.");
+        answerIT5.setKanbanStatus("Done");
         answerRepository.save(answerIT5);
 
         Question questionIT6 = new Question("I.T.6", "I&T", "Demonstrate the use of a hash in a program. Take screenshots of: \n" +
@@ -57,9 +57,9 @@ public class DataLoader implements ApplicationRunner {
         questionRepository.save(questionIT6);
 
         Answer answerIT6 = new Answer(questionIT6.getId(), student3);
-        answerIT6.setEvidenceImageProvided("TEST URL");
-        answerIT6.setEvidenceTextProvided("Test Text");
-        answerIT6.setKanbanStatus("In Progress");
+        answerIT6.setEvidenceImageProvided("https://res.cloudinary.com/fonz/image/upload/v1545240999/Screen_Shot_2018-12-19_at_17.36.10.png");
+        answerIT6.setEvidenceTextProvided("The ‘find_artist’ method looks through the hash entries for the song name and returns the artist if the song title is found.");
+        answerIT6.setKanbanStatus("Done");
         answerRepository.save(answerIT6);
 
         Question questionIT3 = new Question("I.T.3", "I&T", "Demonstrate searching data in a program. Take screenshots of: \n" +
@@ -68,9 +68,9 @@ public class DataLoader implements ApplicationRunner {
         questionRepository.save(questionIT3);
 
         Answer answerIT3 = new Answer(questionIT3.getId(), student3);
-        answerIT3.setEvidenceImageProvided("TEST URL");
-        answerIT3.setEvidenceTextProvided("Test Text");
-        answerIT3.setKanbanStatus("In Progress");
+        answerIT3.setEvidenceImageProvided("https://res.cloudinary.com/fonz/image/upload/v1545241283/Screen_Shot_2018-12-19_at_17.40.48.png");
+        answerIT3.setEvidenceTextProvided("find_artist takes a play list (as a hash of hashes) and a song title and returns the artist.");
+        answerIT3.setKanbanStatus("Done");
         answerRepository.save(answerIT3);
 
         Question questionIT4 = new Question("I.T.4", "I&T", "Demonstrate sorting data in a program. Take screenshots of:\n" +
