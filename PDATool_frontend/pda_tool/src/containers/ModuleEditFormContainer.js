@@ -12,7 +12,6 @@ class ModuleEditFormContainer extends Component {
       module: {}
     };
     // Text and image removed - manage through the componentDidMount
-    console.log("Props in constructor of ModuleEditFormContainer", props);
   };
 
   componentDidMount() {
