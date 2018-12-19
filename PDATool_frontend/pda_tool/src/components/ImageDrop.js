@@ -1,7 +1,7 @@
 import React from 'react';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
-import cloudKey from '../../key.js';
+import cloudKey from '../helpers/key.js';
 
 const CLOUDINARY_UPLOAD_PRESET = cloudKey;
 const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/fonz/upload';
