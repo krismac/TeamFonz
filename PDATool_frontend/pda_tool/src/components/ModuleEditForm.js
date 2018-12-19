@@ -2,52 +2,59 @@ import React, {Component} from 'react';
 import ImageDrop from './ImageDrop.js';
 
 class ModuleEditForm extends Component {
-  constructor(props){
+
+  constructor(props) {
     super(props);
     this.state = {
-      // text: props.moduleData.text,
-      // image: props.moduleData.image
+      imageEvidence: '',
+      textEvidence: ''
     }
-    console.log("ModuleEditForm State: ", this.state);
+    this.handleTextChange = this.handleTextChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillReceiveProps(props){
-    console.log("ModuleEditForm gets props:", props);
+  handleTextChange(event) {
+    const textEvidence = event.target.value;
+    this.setState({textEvidence: textEvidence})
   }
 
-  handleSubmit(event){
+  handleSubmit(event) {
     event.preventDefault();
-    console.log(this.state);
-    const module = {
-      "text": this.state.text,
-      "image": this.state.image
+
+    const newEvidence = {}
+    if (this.state.imageEvidence) {
+      newEvidence["evidenceImageProvided"] = this.state.imageEvidence;
     }
-    this.props.handleModuleEdit(module);
+    if (this.state.textEvidence) {
+      newEvidence["evidenceTextProvided"] = this.state.textEvidence;
+    }
+    this.props.handleModuleEdit(newEvidence);
   }
 
-render(){
-  return (
-    <div className="module-edit-form-component">
-      <form onSubmit={this.handleSubmit}>
-      <label for="description">Add a description that shows evidence of how you met learning objective</label>
-      <input type="text" value={this.state.text} placeholder="input text here"
-      onChange={e => this.setState({text: e.target.value})}/>
+  render() {
+    return (
+        <div className="module-edit-form-component">
+          <form onSubmit={this.handleSubmit}>
 
-      <label for="images">Add image</label>
+            <label for="description">Add a description that shows evidence of how you met learning objective</label>
+            <input type="text" value={this.state.textEvidence} placeholder="input text here"
+            onChange={this.handleTextChange}/>
 
-        <ImageDrop handleUploadSuccess={(url) => {
-          this.setState({image: url})
-        }}/>
+            <label for="images">Add image</label>
 
-      </form>
-      <a>Button to Save Progress</a>
-      <a>Button to Save Completion</a>
-      <a>Button to Delete/Reset evidence</a>
-    </div>
+              <ImageDrop handleUploadSuccess={(url) => {
+                this.setState({imageEvidence: url})
+              }}/>
+
+            <input type="submit" value="Submit" />
+
+          </form>
+          <a>Button to Save Progress</a>
+          <a>Button to Save Completion</a>
+          <a>Button to Delete/Reset evidence</a>
+        </div>
     )
   }
 
-};
-
+}
 export default ModuleEditForm;

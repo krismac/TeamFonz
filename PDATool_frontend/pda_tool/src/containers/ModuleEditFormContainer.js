@@ -11,7 +11,7 @@ class ModuleEditFormContainer extends Component {
     this.state = {
       module: {}
     };
-    // Text and image removed - manage through the componentDidMount
+    this.handleModuleEdit = this.handleModuleEdit.bind(this);
   };
 
   componentDidMount() {
@@ -20,13 +20,6 @@ class ModuleEditFormContainer extends Component {
     request.get('/api/modules/student/4/question/' + this.props.id).then((data) => {
       this.setState({module: data});
   });
-}
-
-handleModuleEdit(module){
-    const request = new Request();
-    request.patch('/api/answers/'+ this.props.questionId, module).then(() => {
-    })
-
 }
 
   render() {
@@ -62,12 +55,20 @@ handleModuleEdit(module){
           textEvidence={module.textEvidence}
           kanbanStatus={module.kanbanStatus}
           id={this.props.id}
+          handleModuleEdit={this.handleModuleEdit}
           />
         </div>
 
       </div>
     )
   };
+
+  handleModuleEdit(newEvidence){
+      const request = new Request();
+      request.patch('/api/answers/' + this.props.id, newEvidence).then(() => {
+        window.location = '/api/modules/' + this.props.id;
+      })
+  }
 
 };
 

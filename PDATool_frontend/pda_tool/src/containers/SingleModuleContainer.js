@@ -3,6 +3,7 @@
 import React, {Component} from 'react';
 import ModuleDetailed from '../components/ModuleDetailed.js';
 import Request from '../helpers/request.js';
+import {Link} from 'react-router-dom';
 
 class SingleModuleContainer extends Component {
   constructor(props) {
@@ -40,6 +41,11 @@ class SingleModuleContainer extends Component {
           textEvidence={module.textEvidence}
           kanbanStatus={module.kanbanStatus}
           />
+          <Link to={'/api/modules/edit/' + this.props.id}>
+            <div className="edit-module">
+              <p>Edit this module</p>
+            </div>
+          </Link>
         </div>
 
       </div>
