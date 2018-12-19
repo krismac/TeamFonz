@@ -5,8 +5,8 @@ class ModuleEditForm extends Component {
   constructor(props){
     super(props);
     this.state = {
-      text: props.moduleData.text,
-      image: props.moduleData.image
+      // text: props.moduleData.text,
+      // image: props.moduleData.image
     }
     console.log("ModuleEditForm State: ", this.state);
     this.handleSubmit = this.handleSubmit.bind(this);

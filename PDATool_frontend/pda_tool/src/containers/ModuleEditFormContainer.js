@@ -18,11 +18,8 @@ class ModuleEditFormContainer extends Component {
   componentDidMount() {
   // get request will retrieve module data to populate state
     const request = new Request();
-    request.get("api/modules/{id}").then((module) => {
-      console.log(module);
-      this.setState({
-      text: module.text,
-      image: module.image});
+    request.get('/api/modules/student/4/question/' + this.props.id).then((data) => {
+      this.setState({module: data});
   });
 }
 
@@ -32,12 +29,6 @@ handleModuleEdit(module){
     })
 
 }
-    // get request will retrieve module data to populate state
-    let request = new Request();
-    request.get('/api/modules/student/4/question/' + this.props.id).then((data) => {
-      this.setState({module: data});
-    });
-  };
 
   render() {
 
