@@ -17,7 +17,7 @@ package com.example.PDATool.controllers;
 
 
 @RestController
-@RequestMapping(value="/modules")
+@RequestMapping(value="/api/modules")
 public class ModuleController {
 
     @Autowired
