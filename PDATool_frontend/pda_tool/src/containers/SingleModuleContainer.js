@@ -7,12 +7,16 @@ class SingleModuleContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      moduleData: null
+      modules: []
     };
   };
 
   componentDidMount() {
     // get request will retrieve module data to populate state
+    let request = new Request();
+    request.get('/api/modules/student/4').then((data) => {
+      this.setState({modules: data});
+    });
   };
 
   render() {
@@ -24,7 +28,14 @@ class SingleModuleContainer extends Component {
 
         <div>
           <ModuleDetailed
-            data={this.state.moduleData}
+          index={index}
+          unit={module.unit}
+          reference={module.reference}
+          evidenceRequired={module.evidenceRequired}
+          weekNumber={module.weekNumber}
+          imageEvidence={module.imageEvidence}
+          textEvidence={module.textEvidence}
+          kanbanStatus={module.kanbanStatus}
           />
           <a>Button to Add/Edit evidence for this Module</a>
         </div>
