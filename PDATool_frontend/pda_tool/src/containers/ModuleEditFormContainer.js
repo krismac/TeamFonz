@@ -3,20 +3,28 @@
 import React, {Component} from 'react';
 import ModuleDetailed from '../components/ModuleDetailed.js';
 import ModuleEditForm from '../components/ModuleEditForm.js';
+import Request from '../helpers/request.js';
 
 class ModuleEditFormContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      moduleData: null
+      module: {}
     };
   };
 
   componentDidMount() {
     // get request will retrieve module data to populate state
+    let request = new Request();
+    request.get('/api/modules/student/4/question/' + this.props.id).then((data) => {
+      this.setState({module: data});
+    });
   };
 
   render() {
+
+    const {module} = this.state
+
     return (
       <div className="module-edit-form-container">
 
@@ -25,11 +33,8 @@ class ModuleEditFormContainer extends Component {
         <h3>Edit Form is PURPLE box:</h3>
 
         <div>
-          <ModuleDetailed data={this.state.moduleData}/>
-          <ModuleEditForm data={this.state.moduleData}/>
-          <a>Button to Save Progress</a>
-          <a>Button to Save Completion</a>
-          <a>Button to Delete/Reset evidence</a>
+          <ModuleDetailed data={module}/>
+          <ModuleEditForm data={module}/>
         </div>
 
       </div>

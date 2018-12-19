@@ -8,7 +8,7 @@ class SingleModuleContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      module: null
+      module: {}
     };
   };
 
@@ -21,8 +21,7 @@ class SingleModuleContainer extends Component {
   };
 
   render() {
-
-
+    const {module} = this.state
 
     return (
       <div className="single-module-container">

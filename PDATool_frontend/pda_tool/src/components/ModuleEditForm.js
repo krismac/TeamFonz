@@ -13,6 +13,9 @@ const ModuleEditForm = (props) => {
       <input type="text" placeholder="input descriptive text here" />
 
       </form>
+      <a>Button to Save Progress</a>
+      <a>Button to Save Completion</a>
+      <a>Button to Delete/Reset evidence</a>
     </div>
 
   )
