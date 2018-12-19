@@ -4,6 +4,8 @@ import React from 'react';
 
 const ModuleDetailed = (props) => {
 
+  //provides module ID to the ModuleEditFormContainer
+
   return (
     <div className="module-detailed-component">
 

@@ -8,13 +8,28 @@ class ModuleEditFormContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      moduleData: null
+      text: null,
+      image: null
     };
   };
 
   componentDidMount() {
-    // get request will retrieve module data to populate state
-  };
+  // get request will retrieve module data to populate state
+    const request = new Request();
+    request.get("api/modules/{id}").then((module) => {
+      this.setState({
+      text: module.text,
+      image: module.image});
+  });
+}
+
+handleModuleEdit(module){
+    const request = new Request();
+    request.patch('/api/answer/' + this.props.id, module).then(() => {
+
+    })
+
+}
 
   render() {
     return (

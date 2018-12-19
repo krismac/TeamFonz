@@ -34,6 +34,10 @@ onImageDrop(files) {
         }
 
         if (response.body.secure_url !== '') {
+          const url = response.body.secure_url;
+          console.log(url);
+          this.props.handleUploadSuccess(url)
+          
           this.setState({
             uploadedFileCloudinaryUrl: response.body.secure_url
           });
@@ -57,7 +61,10 @@ onImageDrop(files) {
           {this.state.uploadedFileCloudinaryUrl === '' ? null:
         <div>
           <p>Your original file name: {this.state.uploadedFile.name}</p>
-          <img src={this.state.uploadedFileCloudinaryUrl} alt=""/>
+          <img src={this.state.uploadedFileCloudinaryUrl} alt="" height="50%" width="50%"/>
+
+
+
         </div>}
     </div>
   </form>

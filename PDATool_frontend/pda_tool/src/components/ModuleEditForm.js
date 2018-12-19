@@ -1,24 +1,51 @@
 import React, {Component} from 'react';
 import ImageDrop from './ImageDrop.js';
 
-const ModuleEditForm = (props) => {
+class ModuleEditForm extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      text: props.moduleData.text,
+      image: props.moduleData.image
+    }
+    console.log("ModuleEditForm State: ", this.state);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
+  componentWillReceiveProps(props){
+    console.log("ModuleEditForm gets props:", props);
+  }
+
+  handleSubmit(event){
+    event.preventDefault();
+    console.log(this.state);
+    const module = {
+      "text": this.state.text,
+      "image": this.state.image
+    }
+    this.props.handleModuleEdit(module);
+  }
+
+render(){
   return (
-
     <div className="module-edit-form-component">
-      <form>
+      <form onSubmit={this.handleSubmit}>
+      <label for="description">Add a description that shows evidence of how you met learning objective</label>
+      <input type="text" value={this.state.text} placeholder="input text here"
+      onChange={e => this.setState({text: e.target.value})}/>
 
-      <label for="images">Add images</label>
+      <label for="images">Add image</label>
 
-        <ImageDrop/>
 
-      <label for="description">Add description</label>
-      <input type="text" placeholder="input descriptive text here" />
+
+        <ImageDrop handleUploadSuccess={(url) => {
+          this.setState({image: url})
+        }}/>
 
       </form>
     </div>
-
-  )
+    )
+  }
 
 };
 
