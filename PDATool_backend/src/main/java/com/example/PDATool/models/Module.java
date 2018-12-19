@@ -14,6 +14,7 @@ public class Module {
     private String evidenceRequired;
     private int weekNumber;
 
+    private long answerId;
     private String imageEvidence;
     private String textEvidence;
     private String kanbanStatus;
@@ -24,6 +25,7 @@ public class Module {
         this.evidenceRequired = question.getEvidenceRequired();
         this.weekNumber = question.getWeekNumber();
 
+        this.answerId = answer.getId();
         this.imageEvidence = answer.getEvidenceImageProvided();
         this.textEvidence = answer.getEvidenceTextProvided();
         this.kanbanStatus = answer.getKanbanStatus();
@@ -59,6 +61,14 @@ public class Module {
 
     public void setWeekNumber(int weekNumber) {
         this.weekNumber = weekNumber;
+    }
+
+    public long getAnswerId() {
+        return answerId;
+    }
+
+    public void setAnswerId(long answerId) {
+        this.answerId = answerId;
     }
 
     public String getImageEvidence() {

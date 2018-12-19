@@ -2,20 +2,27 @@
 
 import React, {Component} from 'react';
 import ModuleDetailed from '../components/ModuleDetailed.js';
+import Request from '../helpers/request.js';
 
 class SingleModuleContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      moduleData: null
+      module: {}
     };
   };
 
   componentDidMount() {
     // get request will retrieve module data to populate state
+    let request = new Request();
+    request.get('/api/modules/student/4/question/' + this.props.id).then((data) => {
+      this.setState({module: data});
+    });
   };
 
   render() {
+    const {module} = this.state
+
     return (
       <div className="single-module-container">
 
@@ -24,9 +31,15 @@ class SingleModuleContainer extends Component {
 
         <div>
           <ModuleDetailed
-            data={this.state.moduleData}
+          unit={module.unit}
+          reference={module.reference}
+          evidenceRequired={module.evidenceRequired}
+          weekNumber={module.weekNumber}
+          answerId={module.answerId}
+          imageEvidence={module.imageEvidence}
+          textEvidence={module.textEvidence}
+          kanbanStatus={module.kanbanStatus}
           />
-          <a>Button to Add/Edit evidence for this Module</a>
         </div>
 
       </div>

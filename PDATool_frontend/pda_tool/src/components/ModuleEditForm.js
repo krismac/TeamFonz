@@ -36,13 +36,14 @@ render(){
 
       <label for="images">Add image</label>
 
-
-
         <ImageDrop handleUploadSuccess={(url) => {
           this.setState({image: url})
         }}/>
 
       </form>
+      <a>Button to Save Progress</a>
+      <a>Button to Save Completion</a>
+      <a>Button to Delete/Reset evidence</a>
     </div>
     )
   }
