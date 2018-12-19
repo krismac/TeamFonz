@@ -33,8 +33,28 @@ class ModuleEditFormContainer extends Component {
         <h3>Edit Form is PURPLE box:</h3>
 
         <div>
-          <ModuleDetailed data={module}/>
-          <ModuleEditForm data={module}/>
+          <ModuleDetailed
+          unit={module.unit}
+          reference={module.reference}
+          evidenceRequired={module.evidenceRequired}
+          weekNumber={module.weekNumber}
+          answerId={module.answerId}
+          imageEvidence={module.imageEvidence}
+          textEvidence={module.textEvidence}
+          kanbanStatus={module.kanbanStatus}
+          id={this.props.id}
+          />
+          <ModuleEditForm
+          unit={module.unit}
+          reference={module.reference}
+          evidenceRequired={module.evidenceRequired}
+          weekNumber={module.weekNumber}
+          answerId={module.answerId}
+          imageEvidence={module.imageEvidence}
+          textEvidence={module.textEvidence}
+          kanbanStatus={module.kanbanStatus}
+          id={this.props.id}
+          />
         </div>
 
       </div>
