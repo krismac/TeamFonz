@@ -49,9 +49,6 @@ class ModuleEditForm extends Component {
             <input type="submit" value="Submit" />
 
           </form>
-          <a>Button to Save Progress</a>
-          <a>Button to Save Completion</a>
-          <a>Button to Delete/Reset evidence</a>
         </div>
     )
   }

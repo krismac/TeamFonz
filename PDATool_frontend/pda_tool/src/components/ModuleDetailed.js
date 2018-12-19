@@ -30,11 +30,12 @@ const ModuleDetailed = (props) => {
       </div>
 
       <div className="module-detail image-evidence">
-        <p>Image Evidence Here: {props.imageEvidence}</p>
+        <p>Image Evidence:</p>
+        <img src={props.imageEvidence} alt="" height="50%" width="50%"/>
       </div>
 
       <div className="module-detail text-evidence">
-        <p>Text Evidence Here: {props.textEvidence}</p>
+        <p>Text Evidence: {props.textEvidence}</p>
       </div>
 
     </div>

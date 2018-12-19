@@ -1,13 +1,12 @@
 // Landing page which will display the list of modules
 
 import React, {Component} from 'react';
-import ModuleList from '../components/ModuleList.js';
+import ModulePrintList from '../components/ModulePrintList.js';
 import Request from '../helpers/request.js';
 import { PDFExport } from '@progress/kendo-react-pdf';
 import {Link} from 'react-router-dom';
 
-
-class ModuleListContainer extends Component {
+class ModuleListPrintContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -28,8 +27,8 @@ class ModuleListContainer extends Component {
       <>
       <div className="module-list-print">
         <button className="print-button" onClick={this.exportPDFWithComponent}>Print this list to PDF</button>
-        <Link to={'/api/modules/detailed'}>
-          <a>Go to detailed list</a>
+        <Link to={'/api/modules'}>
+          <a>Home</a>
         </Link>
       </div>
 
@@ -42,7 +41,7 @@ class ModuleListContainer extends Component {
         <h3>Simple Module component is GREEN box:</h3>
 
         <div className="module-list-component">
-          <ModuleList
+          <ModulePrintList
             data={this.state.modules}
           />
         </div>
@@ -58,4 +57,4 @@ class ModuleListContainer extends Component {
 
 };
 
-export default ModuleListContainer;
+export default ModuleListPrintContainer;

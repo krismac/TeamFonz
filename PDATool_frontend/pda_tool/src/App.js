@@ -6,6 +6,7 @@ import SingleModuleContainer from './containers/SingleModuleContainer.js';
 import ModuleEditFormContainer from './containers/ModuleEditFormContainer.js';
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import ModuleListPrintContainer from './containers/ModuleListPrintContainer';
 
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
           <Switch>
 
           <Route exact path = '/api/modules' component={ModuleListContainer}/>
+          <Route exact path = '/api/modules/detailed' component={ModuleListPrintContainer}/>
 
           <Route exact path="/api/modules/:id" render = {(props) => {
             const id = props.match.params.id;
