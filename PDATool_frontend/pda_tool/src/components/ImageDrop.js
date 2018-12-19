@@ -50,7 +50,7 @@ onImageDrop(files) {
     return(
       <form>
         <div className="FileUpLoad">
-            <Dropzone onDrop={this.onImageDrop.bind(this)} multiple maxSize={8000000}   accept="image/*" multiple={false}>
+            <Dropzone onDrop={this.onImageDrop.bind(this)} multiple maxSize={8000000}   accept="image/*" >
             {({ getRootProps, getInputProps }) => (
                 <div {...getRootProps()}><input {...getInputProps()} /><p>Drop an image or click to select a file to upload.</p></div>
                   )}
