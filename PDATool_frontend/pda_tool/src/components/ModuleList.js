@@ -11,7 +11,13 @@ const ModuleList = (props) => {
 
         <ModuleSimple
           index={index}
-          requirement={module.evidenceRequired}
+          unit={module.unit}
+          reference={module.reference}
+          evidenceRequired={module.evidenceRequired}
+          weekNumber={module.weekNumber}
+          imageEvidence={module.imageEvidence}
+          textEvidence={module.textEvidence}
+          kanbanStatus={module.kanbanStatus}
         />
         <a>Button to View this Module</a>
 
