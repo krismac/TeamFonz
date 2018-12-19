@@ -13,7 +13,7 @@ class App extends Component {
     return (
 
       <Router >
-        <React.Fragment>
+        <Fragment>
           <Switch>
           <Route path = '/api/modules' component={ModuleListContainer}/>
           <Route path="/api/modules/:id" render = {(props) => {
@@ -27,7 +27,7 @@ class App extends Component {
           }}
           />
           </Switch>
-        </React.Fragment>
+        </Fragment>
       </Router>
 
     );

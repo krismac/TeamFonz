@@ -8,15 +8,15 @@ class SingleModuleContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      modules: []
+      module: null
     };
   };
 
   componentDidMount() {
     // get request will retrieve module data to populate state
     let request = new Request();
-    request.get('/api/modules/student/4').then((data) => {
-      this.setState({modules: data});
+    request.get('/api/modules/student/4/question/' + this.props.id).then((data) => {
+      this.setState({module: data});
     });
   };
 

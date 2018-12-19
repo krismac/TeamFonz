@@ -7,7 +7,7 @@ const ModuleSimple = (props) => {
 
   return (
     <div className="module-simple-component">
-      <Link to={"/api/modules/" + props.answerId}>
+      <Link to={'/api/modules/' + props.answerId}>
 
         <div className="module-detail evidence-required">
           <h4>Evidence Required:</h4>

@@ -37,7 +37,7 @@ const ModuleDetailed = (props) => {
       <p>Text Evidence Here: {props.textEvidence}</p>
     </div>
 
-    <Link to={"/api/modules/edit/" + props.answerId}>
+    <Link to={'/api/modules/edit/' + props.answerId}>
       <div className="edit-module">
         <p>Edit this module</p>
       </div>
