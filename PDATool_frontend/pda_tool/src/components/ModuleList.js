@@ -15,6 +15,7 @@ const ModuleList = (props) => {
           reference={module.reference}
           evidenceRequired={module.evidenceRequired}
           weekNumber={module.weekNumber}
+          answerId={module.answerId}
           imageEvidence={module.imageEvidence}
           textEvidence={module.textEvidence}
           kanbanStatus={module.kanbanStatus}
