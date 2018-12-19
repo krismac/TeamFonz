@@ -41,7 +41,6 @@ class SingleModuleContainer extends Component {
           textEvidence={module.textEvidence}
           kanbanStatus={module.kanbanStatus}
           />
-          <a>Button to Add/Edit evidence for this Module</a>
         </div>
 
       </div>
