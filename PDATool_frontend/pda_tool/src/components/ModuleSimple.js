@@ -14,7 +14,7 @@ const ModuleSimple = (props) => {
           <p>{props.evidenceRequired}</p>
         </div>
 
-        <div className="module-detail week">
+        <div classNamez="module-detail week">
           <h4>Relevant Week: {props.weekNumber}</h4>
         </div>
 
