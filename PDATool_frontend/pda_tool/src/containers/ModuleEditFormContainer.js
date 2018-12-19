@@ -11,12 +11,14 @@ class ModuleEditFormContainer extends Component {
       text: null,
       image: null
     };
+    console.log("Props in constructor of ModuleEditFormContainer", props);
   };
 
   componentDidMount() {
   // get request will retrieve module data to populate state
     const request = new Request();
     request.get("api/modules/{id}").then((module) => {
+      console.log(module);
       this.setState({
       text: module.text,
       image: module.image});
@@ -25,8 +27,7 @@ class ModuleEditFormContainer extends Component {
 
 handleModuleEdit(module){
     const request = new Request();
-    request.patch('/api/answer/' + this.props.id, module).then(() => {
-
+    request.patch('/api/answers/'+ this.props.questionId, module).then(() => {
     })
 
 }

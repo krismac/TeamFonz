@@ -37,7 +37,7 @@ onImageDrop(files) {
           const url = response.body.secure_url;
           console.log(url);
           this.props.handleUploadSuccess(url)
-          
+
           this.setState({
             uploadedFileCloudinaryUrl: response.body.secure_url
           });
