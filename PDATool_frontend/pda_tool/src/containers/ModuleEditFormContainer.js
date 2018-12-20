@@ -4,6 +4,8 @@ import React, {Component} from 'react';
 import ModuleDetailed from '../components/ModuleDetailed.js';
 import ModuleEditForm from '../components/ModuleEditForm.js';
 import Request from '../helpers/request.js';
+import SubNav from '../components/SubNav';
+import FooterPage from '../components/Nav_Footer.js';
 
 class ModuleEditFormContainer extends Component {
   constructor(props) {
@@ -27,12 +29,11 @@ class ModuleEditFormContainer extends Component {
     const {module} = this.state
 
     return (
+      <>
+
+      <SubNav
+      />
       <div className="module-edit-form-container">
-
-        <h3>Edit Form Container is RED box:</h3>
-        <h3>Detailed Module Component is ORANGE box:</h3>
-        <h3>Edit Form is PURPLE box:</h3>
-
         <div>
           <ModuleDetailed
           unit={module.unit}
@@ -60,6 +61,9 @@ class ModuleEditFormContainer extends Component {
         </div>
 
       </div>
+
+      <FooterPage/>
+      </>
     )
   };
 

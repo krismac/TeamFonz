@@ -5,6 +5,12 @@ import ModuleList from '../components/ModuleList.js';
 import Request from '../helpers/request.js';
 import { PDFExport } from '@progress/kendo-react-pdf';
 import {Link} from 'react-router-dom';
+import SubNav from '../components/SubNav';
+import FooterPage from '../components/Nav_Footer.js';
+import {CardGroup, MDBListGroup} from "mdbreact";
+
+
+
 
 
 class ModuleListContainer extends Component {
@@ -26,29 +32,38 @@ class ModuleListContainer extends Component {
   render() {
     return (
       <>
-      <div className="module-list-print">
-        <button className="print-button" onClick={this.exportPDFWithComponent}>Print this list to PDF</button>
-        <Link to={'/api/modules/detailed'}>
-          <a>Go to detailed list</a>
-        </Link>
-      </div>
+
+      <SubNav
+      />
+
+
+        <div className="module-list-print">
+          <button className="print-button" class="btn btn-primary Ripple-parent" onClick={this.exportPDFWithComponent}>Print this list to PDF</button>
+
+
+
+        </div>
+
 
       <PDFExport ref={(component) => this.pdfExportComponent = component} paperSize="A4">
 
+<h1>View a summary of all modules and their status</h1>
       <div className="module-list-container">
 
-        <h3>Module List Container is RED box:</h3>
-        <h3>Module List Component is BLUE box below:</h3>
-        <h3>Simple Module component is GREEN box:</h3>
+<MDBListGroup className="my-4 mx-4" style={{ width: "70%" }}>
+                <CardGroup>
+                <div className="module-list-component">
+                        <ModuleList
+                        data={this.state.modules}/></div>
 
-        <div className="module-list-component">
-          <ModuleList
-            data={this.state.modules}
-          />
-        </div>
+                </CardGroup>
 
-      </div>
+      </MDBListGroup>
+</div>
       </PDFExport>
+      <Link to={'/api/modules'} role="Button" class="btn btn-primary Ripple-parent">Home</Link>
+      <Link to={'/api/modules/detailed'} role="Button" class="btn btn-primary Ripple-parent" >Go to detailed list</Link>
+      <FooterPage/>
       </>
     );
   };

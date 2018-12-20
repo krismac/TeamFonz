@@ -1,44 +1,54 @@
 //  more question detail plus student Answer
 
 import React from 'react';
+import {Card, CardBody, CardTitle, CardText, Table, TableBody, TableHead} from "mdbreact";
 const ModuleDetailed = (props) => {
 
   //provides module ID to the ModuleEditFormContainer
 
   return (
-    <div className="module-detailed-component">
+<>
+    <Card>
+      <CardBody>
+        <CardTitle tag="h3">Evidence</CardTitle>
+        <CardText>
+          <div className="module-detailed-component">
+            <div className="module-detail evidence-required">
+            <h5>Learning Outcome</h5><p>{props.evidenceRequired}</p>
+            </div>
+          </div>
+          </CardText>
+                <div className="module-detail-image-evidence">
+                  <h6>Image Evidence:</h6>
+                  <img src={props.imageEvidence} alt="" height="40%" width="40%"/>
+                </div>
 
-      <div className="module-detail unit">
-        <p>Unit: {props.unit}</p>
-      </div>
+                <div className="module-detail-text-evidence">
+                  <h6>Narrative Evidence:</h6><p>{props.textEvidence}</p>
+                </div>
 
-      <div className="module-detail reference">
-        <p>Reference: {props.reference}</p>
-      </div>
+              </CardBody>
+            </Card>
 
-      <div className="module-detail evidence-required">
-        <h4>Evidence Required:</h4>
-        <p>{props.evidenceRequired}</p>
-      </div>
-
-      <div className="module-detail kanban-status">
-        <h4>Status: {props.kanbanStatus}</h4>
-      </div>
-
-      <div className="module-detail week">
-        <h4>Relevant Week: {props.weekNumber}</h4>
-      </div>
-
-      <div className="module-detail image-evidence">
-        <p>Image Evidence:</p>
-        <img src={props.imageEvidence} alt="" height="50%" width="50%"/>
-      </div>
-
-      <div className="module-detail text-evidence">
-        <p>Text Evidence: {props.textEvidence}</p>
-      </div>
-
-    </div>
+            <Table forcePageBreak="div">
+            <TableHead>
+              <tr>
+                <th className="module-detail week">Relevant Week:</th>
+                <th className="module-detail reference">Reference:</th>
+                <th className="module-detail unit">Unit:</th>
+                <th className="module-detail kanban-status">Status:</th>
+              </tr>
+            </TableHead>
+            <TableBody>
+              <tr>
+                <td>{props.weekNumber}</td>
+                <td>{props.reference}</td>
+                <td>{props.unit}</td>
+                <td>{props.kanbanStatus}</td>
+              </tr>
+               </TableBody>
+             </Table>
+            </>
   );
 
 }

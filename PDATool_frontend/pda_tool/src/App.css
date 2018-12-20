@@ -14,8 +14,9 @@
   color: white;
 } */
 
-.FileUpLoad
+.Dropper
 {
+  background-color: #F0F0F0;
   border: 2px solid green;
   margin: 3px;
   padding: 2px;
@@ -23,37 +24,41 @@
 
 .module-list-container, .single-module-container, .module-edit-form-container
 {
-  border: 2px solid red;
   margin: 3px;
   padding: 2px;
+  background-color: #F8F8F8;
 }
 
 .module-list-component {
-  border: 2px solid blue;
   margin: 3px;
   padding: 2px;
+  background-color: #E0E0E0;
 }
 
-.module-simple-component {
+.module-detail-image-evidence {float: left;}
+
+.module-detail-text-evidence {width: 50%; float: left;}
+
+/* .module-simple-component {
   border: 2px solid green;
   margin: 3px;
   padding: 2px;
-}
+} */
 
 .module-detailed-component {
-  border: 2px solid orange;
   margin: 3px;
   padding: 2px;
+  background-color: #F8F8F8;
 }
 
 .module-edit-form-component {
-  border: 2px solid purple;
+  background-color: #D3D3D3;
   margin: 3px;
   padding: 2px;
 }
 
-a {
+/* a {
   border: 2px dashed black;
   margin: 2px;
   padding: 2px;
-}
+} */

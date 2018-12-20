@@ -20,8 +20,6 @@ const ModuleList = (props) => {
           textEvidence={module.textEvidence}
           kanbanStatus={module.kanbanStatus}
         />
-
-
       </div>
     )
   });

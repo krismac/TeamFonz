@@ -1,9 +1,9 @@
 import React from 'react';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
-import cloudKey from '../helpers/key.js';
 
-const CLOUDINARY_UPLOAD_PRESET = cloudKey;
+
+const CLOUDINARY_UPLOAD_PRESET = 'l67ebvpg';
 const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/fonz/upload';
 
 export default class ImageDrop extends React.Component {
@@ -53,7 +53,7 @@ onImageDrop(files) {
         <div className="FileUpLoad">
             <Dropzone onDrop={this.onImageDrop.bind(this)} maxSize={8000000}   accept="image/*" multiple={false}>
             {({ getRootProps, getInputProps }) => (
-                <div {...getRootProps()}><input {...getInputProps()} /><p>Drop an image or click to select a file to upload.</p></div>
+                <div className="Dropper" {...getRootProps()}><input {...getInputProps()} /><p>Drop an image or click to select a file to upload.</p></div>
                   )}
 
                   </Dropzone>
@@ -63,9 +63,6 @@ onImageDrop(files) {
         <div>
           <p>Your original file name: {this.state.uploadedFile.name}</p>
           <img src={this.state.uploadedFileCloudinaryUrl} alt="" height="50%" width="50%"/>
-
-
-
         </div>}
     </div>
   </form>

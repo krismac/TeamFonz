@@ -4,6 +4,9 @@ import React, {Component} from 'react';
 import ModuleDetailed from '../components/ModuleDetailed.js';
 import Request from '../helpers/request.js';
 import {Link} from 'react-router-dom';
+import SubNav from '../components/SubNav';
+import FooterPage from '../components/Nav_Footer.js';
+
 
 class SingleModuleContainer extends Component {
   constructor(props) {
@@ -25,10 +28,13 @@ class SingleModuleContainer extends Component {
     const {module} = this.state
 
     return (
+<>
+<SubNav
+/>
       <div className="single-module-container">
 
-        <h3>Single Module Container is RED box:</h3>
-        <h3>Detailed Module Component is ORANGE box:</h3>
+        <h3>View a Single Module</h3>
+        <h3>Detailed Module Description</h3>
 
         <div>
           <ModuleDetailed
@@ -41,14 +47,20 @@ class SingleModuleContainer extends Component {
           textEvidence={module.textEvidence}
           kanbanStatus={module.kanbanStatus}
           />
-          <Link to={'/api/modules/edit/' + this.props.id}>
-            <div className="edit-module">
-              <p>Edit this module</p>
-            </div>
-          </Link>
-        </div>
 
+<Link to={'/api/modules/edit/' + this.props.id} class="btn btn-default Ripple-parent">Edit this module</Link>
+
+
+
+            <div className="edit-module">
+
+            </div>
+
+        </div>
+<FooterPage/>
       </div>
+
+    </>
     );
   };
 

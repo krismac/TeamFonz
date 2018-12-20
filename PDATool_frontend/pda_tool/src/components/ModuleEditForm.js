@@ -36,17 +36,24 @@ class ModuleEditForm extends Component {
         <div className="module-edit-form-component">
           <form onSubmit={this.handleSubmit}>
 
-            <label for="description">Add a description that shows evidence of how you met learning objective</label>
-            <input type="text" value={this.state.textEvidence} placeholder="input text here"
-            onChange={this.handleTextChange}/>
+            <h3>Add Evidence</h3>
+            <h6>Add supporting commentary</h6>
 
-            <label for="images">Add image</label>
+            <textarea
+              value={this.state.textEvidence}
+              placeholder="Add a text description that shows evidence of how you met learning objective"
+              onChange={this.handleTextChange}
+              className="form-control"
+              id="exampleFormControlTextarea1"
+              rows="8"
+            />
 
-              <ImageDrop handleUploadSuccess={(url) => {
+            <h6>Add an image</h6>
+              <ImageDrop for="images" handleUploadSuccess={(url) => {
                 this.setState({imageEvidence: url})
               }}/>
 
-            <input type="submit" value="Submit" />
+            <input class="btn btn-default Ripple-parent" type="submit" value="Submit" />
 
           </form>
         </div>
